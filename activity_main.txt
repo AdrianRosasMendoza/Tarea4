@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/spinner"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="@drawable/anton"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adrian.tarea4.MainActivity"
+    android:weightSum="1"
+    android:id="@+id/relative">
+
+    <android.widget.EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.17"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/nombre"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </android.widget.EditText>
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setdate"
+        android:layout_marginTop="58dp"
+        android:gravity="center"
+       android:onClick="datePicker"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_below="@+id/nombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.widget.EditText
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_weight="0.17"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/telefono"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/pickDate"
+        android:layout_centerHorizontal="true">
+
+    </android.widget.EditText>
+
+    <android.widget.EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_weight="0.17"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/email"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/telefono"
+        android:layout_centerHorizontal="true">
+
+    </android.widget.EditText>
+
+    <android.widget.EditText
+        android:id="@+id/contacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_weight="0.17"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/descripcion"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true">
+
+    </android.widget.EditText>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contacto"
+        android:text="@string/next"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pickDate"
+        android:layout_marginBottom="13dp"
+        android:layout_toEndOf="@+id/telefono"
+        android:layout_toRightOf="@+id/telefono"
+        android:text="TextView"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
+
+</ScrollView>

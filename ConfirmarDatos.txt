@@ -1,0 +1,53 @@
+package com.example.adrian.tarea4;
+
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class ConfirmarDatos extends AppCompatActivity {
+
+    TextView tvname, tvfecha, tvtel, tvmail, tvdesc;
+    Button editar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_confirmar_datos);
+
+        Bundle info = getIntent().getExtras();
+        String nombre = info.getString(getResources().getString(R.string.nombre));
+        String email = info.getString(getResources().getString(R.string.email));
+        String tel = info.getString(getResources().getString(R.string.telefono));
+        String datos = info.getString(getResources().getString(R.string.descripcion));
+        String fecha = info.getString("Calendario");
+
+        tvname = (TextView) findViewById(R.id.tvname);
+        tvtel = (TextView) findViewById(R.id.tvtel);
+        tvmail = (TextView) findViewById(R.id.tvemail);
+        tvdesc = (TextView) findViewById(R.id.tvdesc);
+        tvfecha = (TextView) findViewById(R.id.tvfecha);
+
+        tvname.setText("Nombre: "+nombre);
+        tvtel.setText("Telefono: "+tel);
+        tvmail.setText("Email: "+email);
+        tvdesc.setText("Descripcion: "+datos);
+        tvfecha.setText("Fecha de Nacimiento: "+fecha);
+
+        editar = (Button) findViewById(R.id.editar);
+        editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent editar = new Intent(ConfirmarDatos.this, MainActivity.class);
+                onBackPressed();
+
+            }
+        });
+
+
+    }
+
+}
+
